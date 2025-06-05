@@ -1,21 +1,58 @@
+body, html {
+  height: auto;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App {
   font-family: Arial, sans-serif;
   padding: 20px;
-  max-width: 600px;
-  margin: auto;
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: white;
 }
 
-nav {
-  margin-bottom: 20px;
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;                   /* Ensures it's on top */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  background-color: white;        /* Prevents content showing behind nav */
 }
 
-nav button {
-  margin-right: 10px;
+.nav h2 {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
-form input,
-form button,
-form label {
-  display: block;
-  margin: 10px 0;
+.nav button {
+  color: black;
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav button:hover {
+  background-color: #e0e0e0;
+}
+.nav button:focus {
+  outline: none;
+  color: blue;
+}
+.nav button:active {
+  background-color: #d0d0d0;
+  color: blue;
 }

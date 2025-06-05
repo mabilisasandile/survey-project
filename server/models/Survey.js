@@ -2,10 +2,9 @@ import mongoose from 'mongoose';
 
 const SurveySchema = new mongoose.Schema({
   name: String,
-  surname: String,
   email: String,
-  age: Number,
-  date: Date,
+  dob: Date,
+  contact: String,
   favoriteFoods: [String],
   ratings: {
     eatOut: Number,

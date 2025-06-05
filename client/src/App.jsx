@@ -7,12 +7,15 @@ function App() {
   const [view, setView] = useState('form');
 
   return (
-    <div className="App">
-      <nav>
-        <button onClick={() => setView('form')}>Fill Out Survey</button>
-        <button onClick={() => setView('results')}>View Survey Results</button>
-      </nav>
+    <div>
+      <div className="nav">
+        <h2>_Surveys</h2>
+        <button onClick={() => setView('form')}>FILL OUT SURVEY</button>
+        <button onClick={() => setView('results')}>VIEW SURVEY RESULTS</button>
+      </div>
+      <div className="App">
       {view === 'form' ? <SurveyForm /> : <SurveyResults />}
+      </div>
     </div>
   );
 }
